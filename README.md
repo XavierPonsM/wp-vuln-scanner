@@ -22,9 +22,9 @@ The report is saved as `report_<host>_<timestamp>.html` and opened in the browse
 
 | Area | Checks |
 |---|---|
-| Infrastructure | DNS resolution, web server and PHP version from headers, HTTPS redirect, HSTS, X-Frame-Options |
+| Infrastructure | DNS resolution, web server and PHP version from headers (`Server`, `X-Powered-By`), HTTPS redirect, HSTS, X-Frame-Options |
 | WordPress core | Version fingerprinting, active theme and version |
-| Attack surface | XML-RPC enabled, REST API user enumeration (`/wp-json/wp/v2/users`) |
+| Attack surface | XML-RPC enabled, public REST API exposure (`/wp-json/`) |
 | Plugins | Concurrent probing of 40+ common plugins plus slugs found in the page HTML; version read from each plugin's `readme.txt` |
 | Vulnerabilities | NVD lookup by CPE and keyword, WPScan lookup by slug, version-range filtering, de-duplication |
 
